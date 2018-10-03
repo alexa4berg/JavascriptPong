@@ -39,7 +39,7 @@ class Ball {
             this.y = height + this.size / 2;
         }
     }
-
+    // creates bounce check edges function
     bounce() {
         if (this.x > width - this.size / 2) { //check right edge
             this.deltaX = this.deltaX * -1;
