@@ -6,13 +6,13 @@ class Ball {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.deltaX = random(3,7);
+        this.deltaX = random(3, 7);
         this.deltaY = random(5, 20);
         this.color = color(random(100, 255), random(100, 255), random(100, 255));
         this.size = 50;
     }
 
-
+    //move function allowing movement of the Ball object
     move() {
         this.x += this.deltaX;
         this.y += this.deltaY;
@@ -25,7 +25,7 @@ class Ball {
 
     wrap() {
         if (this.x > width + this.size / 2) { //check right edge
-            this.x = -this.size / 2 ;
+            this.x = -this.size / 2;
         }
         if (this.y > height + this.size / 2) { //check bottom edge
             this.y = -this.size / 2 + random(-15, 15);
@@ -45,10 +45,10 @@ class Ball {
             this.deltaX = this.deltaX * -1;
             this.x = width - this.size / 2; //to stop jiggling
         }
-//        if (this.y > height - this.size / 2) { //check bottom edge
-//            this.deltaY = this.deltaY * -1;
-//            this.y = height - this.size / 2;
-//        }
+        //        if (this.y > height - this.size / 2) { //check bottom edge
+        //            this.deltaY = this.deltaY * -1;
+        //            this.y = height - this.size / 2;
+        //        }
 
         if (this.x < this.size / 2) { //check left edge
             this.deltaX = this.deltaX * -1;
@@ -60,8 +60,8 @@ class Ball {
             this.y = this.size / 2;
         }
     }
-    
-    
+
+
 
 
 }
