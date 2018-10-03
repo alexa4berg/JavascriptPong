@@ -12,12 +12,12 @@ class Ball {
         this.size = 50;
     }
 
-    //move function allowing movement of the Ball object
+    // move function allowing movement of the Ball object
     move() {
         this.x += this.deltaX;
         this.y += this.deltaY;
     }
-
+    // displays the ball - shape and fill
     display() {
         fill(this.color);
         ellipse(this.x, this.y, this.size, this.size)
