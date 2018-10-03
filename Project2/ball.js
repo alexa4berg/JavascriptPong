@@ -22,7 +22,7 @@ class Ball {
         fill(this.color);
         ellipse(this.x, this.y, this.size, this.size)
     }
-
+    // creates warpping check edges function 
     wrap() {
         if (this.x > width + this.size / 2) { //check right edge
             this.x = -this.size / 2;
